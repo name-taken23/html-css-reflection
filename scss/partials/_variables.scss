@@ -1,0 +1,46 @@
+/*---------- VARIABLES ------------- */
+
+
+//website base colour
+$baseclr: #333645;
+
+//theme colours
+$softwareclr:#67809f;
+$itclr:#4183d7;
+$digitalclr: #2ecc71;
+$telecomsclr: #d64541;
+$webclr: #926fb1;
+$securityclr: #f62459;
+$developerclr: #ce4125;
+$darkitclr: darken($itclr, 25%);
+$darkdigitalclr: darken($digitalclr, 25%);
+
+//social media colours
+$facebookclr: #3b5998;
+$twitterclr: #00aced;
+$instagramclr: #d93175;
+$linkedinclr: #0077b5;
+
+//maps
+$services: ('software', 'it', 'digital', 'telecoms', 'web', 'security', 'developer');
+$website-clrs: (
+  'software': $softwareclr, 
+  'it': $itclr, 
+  'digital': $digitalclr,
+  'telecoms':  $telecomsclr, 
+  'web': $webclr, 
+  'security': $securityclr, 
+  'developer': $developerclr);
+
+$news-clrs: (
+  '1' : $digitalclr,
+  '2' : $softwareclr,
+  '3' : $webclr
+);
+
+$sm-clrs: (
+  '1' : $facebookclr,
+  '2' : $twitterclr,
+  '3' : $instagramclr,
+  '4' : $linkedinclr
+);

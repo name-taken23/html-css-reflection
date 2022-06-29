@@ -1,0 +1,30 @@
+/*---------- MEDIA QUERIES ------------- */
+
+@media (max-width: 768px) {
+    .clientbanner-wrapper {
+        display: none !important;
+    }
+}
+
+/*---------- CLIENT BANNER ------------- */
+
+.clientbanner-wrapper {
+    display: relative;
+}
+
+.client-container {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+}
+
+.client-container .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    >.tooltipimg {
+        flex: 1 1 auto;
+        width: auto;
+    }
+}

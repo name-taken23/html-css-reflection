@@ -1,0 +1,104 @@
+@import '_mixins.scss';
+
+@media (max-width: 992px) {
+  .nav-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 1260px) {
+  .dropdown-menu>ul>li {
+    font-size: .8125rem;
+  }
+}
+
+/*---------- LOOPS + MIXINS ------------- */
+
+@each $service in $services {
+  .container .nav-grid .#{$service} .nav-button>i {
+    @include website-clr-mx(color, #{$service});
+  }
+
+  .nav-grid .#{$service}:hover {
+    @include website-clr-mx(background-color, #{$service});
+
+  }
+
+  .#{$service}:hover .nav-button>i {
+    color: white !important;
+  }
+
+  .#{$service}:hover .dropdown-menu {
+    background-color: darken(map-get($website-clrs, #{$service}), 10%);
+    border: darken(map-get($website-clrs, #{$service}), 10%) 1px solid;
+  }
+
+}
+
+/*---------- NAVBAR ------------- */
+.nav-wrap {
+  background-color: #333645;
+  width: 100%;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.nav-grid-item {
+  display: block;
+  flex-direction: column;
+
+  height: auto;
+  color: white;
+
+  padding-top: 1rem;
+
+  p {
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+}
+
+.nav-button {
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  >small {
+    display: block;
+    font-size: .625rem;
+    padding-bottom: 2px;
+  }
+
+  >p {
+    line-height: .5;
+    margin-bottom: 25px;
+  }
+
+  i {
+    font-size: 1.3rem;
+    display: block;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.dropdown-menu {
+  color: white;
+
+  border-radius: 0 0 5% 5%;
+
+  >ul>li {
+    padding: 5px 5px;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: inline;
+  min-width: 100%;
+  line-height: 2rem;
+}

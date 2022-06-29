@@ -1,0 +1,19 @@
+/*---------- _NABAR.SCSS + _SERVICES.SCSS ------------- */
+@mixin website-clr-mx($property, $service) {
+    #{$property}:map-get($website-clrs, #{$service});
+}
+
+/*---------- _FOOTER.SCSS  ------------- */
+
+@mixin sm-clr-mx($i) {
+    
+    background-color: map-get($map: $sm-clrs, $key: #{$i});
+    border-radius: 50%;
+    
+}
+/*---------- _NEWS.SCSS  ------------- */
+
+@mixin news-clr-mx($property, $i) {
+   #{$property}: map-get($map: $news-clrs, $key:#{$i} );
+  }
+

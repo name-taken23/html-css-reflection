@@ -1,0 +1,89 @@
+/*---------- MEDIA QUERIES ------------- */
+
+@media (max-width: 992px) {
+    .email-sign-up .row {
+        flex-direction: column;
+
+    }
+
+    .email-sign-up .signup-check {
+        flex-direction: row;
+    }
+
+    .inputarea> :last-child {
+        margin-top: 1rem;
+    }
+}
+
+/*---------- NEWSLETTER ------------- */
+
+.inputtag::after {
+    content: "*";
+    color: #d24d57;
+}
+
+.emailhead {
+    margin-bottom: 1rem;
+}
+
+.emailwrap {
+    background-color: #ddd;
+}
+
+.email-sign-up {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.inputtag {
+    font-weight: 600;
+    padding-bottom: .5rem;
+}
+
+.inputfields {
+    width: 100%;
+    height: 3rem;
+    border: none;
+
+}
+
+.btn-email {
+    margin-top: 2rem;
+    color: white;
+    background-color: $baseclr;
+
+
+}
+
+.btn-email:hover {
+    color: white;
+    background-color: darken($baseclr, 10%);
+    border-color: darken($baseclr, 10%);
+}
+
+#sign-up {
+
+    width: 2rem;
+    height: 2rem;
+    background-color: #ddd;
+    border: #333645 solid 3px;
+
+}
+
+#sign-up:checked {
+    background-color: #333645 !important;
+}
+
+#sign-up-text {
+
+    float: left;
+    display: inline;
+    font-weight: 600;
+
+
+}
+
+.signup-check {
+    margin-top: 1rem;
+
+}

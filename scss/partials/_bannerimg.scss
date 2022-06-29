@@ -1,0 +1,78 @@
+/*---------- MEDIA QUERIES ------------- */
+
+@media (max-width: 992px) {
+  .bannerwrap .imgwrap {
+    margin-top: 15px;
+  }
+
+  .bannerwrap .img-text {
+    text-align: center;
+  }
+
+  .bannerwrap .img-text {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    >.h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      margin: 0 0 1.25rem;
+    }
+
+    >p {
+      margin-bottom: .375rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+/*---------- BANNER IMAGE ------------- */
+
+.bannerimg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.imgwrap {
+  display: flex;
+  position: relative;
+  height: 550px;
+  margin-top: -20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 550px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, transparent 25%, #000);
+
+  }
+}
+
+.img-text {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  >.h1 {
+    font-weight: 600;
+    color: white;
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  >p {
+    color: white;
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+}

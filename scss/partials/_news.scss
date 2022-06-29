@@ -1,0 +1,143 @@
+@import '_mixins.scss';
+
+/*---------- MEDIA QUERIES ------------- */
+
+@media (max-width: 768px) {
+    .newswrapper .container>.row> :last-child {
+        display: inline !important;
+
+    }
+
+    .newswrapper .container>.row> :not(:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .newswrapper .container>.row> :last-child {
+        display: none;
+    }
+}
+
+/*---------- LOOPS + MIXINS ------------- */
+
+@for $i from 1 through 3 {
+    .newsheadclr#{$i} {
+        @include news-clr-mx(color, #{$i});
+    }
+}
+
+@for $i from 1 through 3 {
+    .newsbtnclr#{$i} {
+
+        @include news-clr-mx(background-color, #{$i});
+    }
+
+    .newsbtnclr#{$i}:hover {
+
+        @include news-clr-mx(background-color, #{$i});
+    }
+}
+
+/*---------- NEWS ------------- */
+
+.card {
+    top: 0;
+    transition: top ease .5s;
+
+    &:hover {
+        top: -10px;
+    }
+
+    >.card-body a {
+        text-decoration: none;
+    }
+}
+
+.newswrapper {
+    margin-bottom: 3rem;
+}
+
+.newscontent {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.reviews,
+.readmore {
+    color: white;
+}
+
+.viewall {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: auto;
+    float: right;
+    white-space: nowrap;
+
+    >i {
+        font-size: 2rem;
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.newshead-wrap {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.news {
+    font-size: 2.23rem;
+    font-weight: 600;
+}
+
+.newsimg {
+    height: auto;
+    width: 100%;
+
+}
+
+.newstext {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: darken(gray, 10%);
+}
+
+.newsheader,
+.posted {
+    font-weight: 600;
+}
+
+.btn-news {
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 2rem !important;
+    --bs-btn-hover-color: #fff !important;
+
+}
+
+.newsfooter {
+    border-top: 1px solid lighten(gray, 20%);
+    display: flex;
+    padding-top: 2rem;
+}
+
+.date,
+.posted {
+    font-size: 0.85rem;
+}
+
+.newsftimg {
+    padding-right: 1.5rem;
+}
