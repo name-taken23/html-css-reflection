@@ -93,12 +93,14 @@
   border-radius: 0 0 5% 5%;
 
   >ul>li {
-    padding: 5px 5px;
+    padding: 5px 15px;
+    margin-top: 5px;
+    
   }
 }
 
 .dropdown:hover .dropdown-menu {
   display: inline;
   min-width: 100%;
-  line-height: 2rem;
+  
 }

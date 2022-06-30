@@ -18,6 +18,19 @@
   .logo-wrapper {
     margin-right: 1rem;
   }
+
+  .sidebarbtn-wrapper .sidebarbtn::before {
+            content: "";
+            position: absolute;
+            bottom: 1;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 28px;
+            height: 3px;
+            display: block;
+            background-color: #fff;
+  }
 }
 
 @media (max-width: 991px) {
