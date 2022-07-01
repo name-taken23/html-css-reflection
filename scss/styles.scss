@@ -21,7 +21,7 @@
 //overriding bootstrap specs to match netmatters. 
 @media (min-width: 576px) {
   .container {
-    max-width: 576px !important;
+    max-width: 100%!important;
   }
 }
 
@@ -38,7 +38,7 @@
 }
 
 
-@media (min-width: 1260px) {
+@media (min-width: 1200px) {
   .container {
     max-width: 1200px !important;
   }
@@ -171,6 +171,7 @@ h1 {
 }
 
 .h2 {
+  font-size: 2rem;
   font-weight: 400;
   color: #333645;
 

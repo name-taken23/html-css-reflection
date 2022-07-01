@@ -4,6 +4,9 @@
     .clientbanner-wrapper {
         display: none !important;
     }
+    .tooltipwrapper .tooltiptext::after {
+        position: sticky;
+    }
 }
 
 /*---------- CLIENT BANNER ------------- */

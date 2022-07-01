@@ -1,35 +1,34 @@
 /*---------- MEDIA QUERIES ------------- */
 
 @media (max-width: 768px) {
-
+  header {
+    padding-bottom: 0px!important;
+  }
   .header-wrapper .search-wrapper {
     display: none;
   }
 
   .header-wrapper .sidebarbtn-wrapper {
+    display: flex;
     margin-left: auto;
   }
 
   .mobile-search {
     margin-top: 1rem;
     display: flex !important;
+
   }
 
   .logo-wrapper {
     margin-right: 1rem;
   }
 
-  .sidebarbtn-wrapper .sidebarbtn::before {
-            content: "";
-            position: absolute;
-            bottom: 1;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 28px;
-            height: 3px;
-            display: block;
-            background-color: #fff;
+  .sidebarbtn-wrapper .phoneus-btn {
+    display: inline !important;
+    font-size: 1.5rem;
+    margin-top: 5px;
+
+
   }
 }
 
@@ -68,11 +67,6 @@
 
 }
 
-@media (min-width: 1200px) {
-  .logo-wrapper {
-    width: 32%;
-  }
-}
 
 /*---------- HEADER ------------- */
 
@@ -96,6 +90,9 @@ header {
   font-size: 2rem;
 }
 
+.sidebarbtn-wrapper .phoneus-btn {
+  display: none;
+}
 
 .header-wrapper {
   padding-bottom: 1.3rem;
@@ -133,7 +130,7 @@ header {
 
   &:focus {
     color: white;
-    background-color: darken(#4183d7, 10%)!important;
+    background-color: darken(#4183d7, 10%) !important;
   }
 }
 
@@ -165,8 +162,7 @@ header {
 }
 
 /*---------- SEARCH ------------- */
-.search-wrapper .searchbtn,
-.search-wrapper-mobile .searchbtn {
+.search-wrapper .searchbtn {
   color: white;
   background-color: #999aa2;
   width: 4rem;
@@ -186,14 +182,55 @@ header {
   >.search {
     width: 240px;
     height: 56px;
-  }
-}
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
 
-.search-wrapper-mobile {
-  display: flex;
-  flex-wrap: nowrap;
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus {
+      border: 1px solid #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, 0.6);
+
+
+    }
+  }
 }
 
 .mobile-search {
   display: none;
-}
+
+  >.search-wrapper-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+
+    >.form-control {
+      background-color: rgba(0, 0, 0, .1);
+      outline: 1px solid hsla(0, 0%, 100%, .2);
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      transition: none;
+      height: 47px;
+      width: 100%;
+      padding-right: 40px;
+      border-radius: 2px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
+
+
+     .searchbtn{
+      background: none;
+      border: none;
+      color: #333645;
+      position: absolute;
+      right: 20px;
+      line-height: 35px;
+      font-weight: 600;
+      font-size: 20px;
+      outline: none;
+    }
+    }
+  }
+

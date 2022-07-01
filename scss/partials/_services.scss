@@ -59,7 +59,7 @@
 .service-list .row .col-md-12 .h1 {
   font-size: 2.7rem;
   margin-top: -13px;
-
+  color: $baseclr;
   >strong {
     font-weight: 600;
   }
@@ -94,6 +94,7 @@
 }
 
 .service-list .block>span.h2 {
+ 
   font-size: 1.3rem;
   position: relative;
   padding-bottom: 10px;

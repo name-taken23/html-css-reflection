@@ -13,6 +13,13 @@
     .inputarea> :last-child {
         margin-top: 1rem;
     }
+
+    .signup-check>div {
+
+
+        margin-right: 0 !important;
+
+    }
 }
 
 /*---------- NEWSLETTER ------------- */
@@ -42,8 +49,24 @@
 
 .inputfields {
     width: 100%;
-    height: 3rem;
+    padding: 5px 15px;
+    height: 47px;
     border: none;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:focus {
+        border: 1px solid #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, 0.6);
+
+
+    }
 
 }
 
@@ -80,10 +103,16 @@
     display: inline;
     font-weight: 600;
 
+    >a {
+        text-decoration: underline;
+    }
 
 }
 
 .signup-check {
     margin-top: 1rem;
 
+    >div {
+        margin-right: -2rem;
+    }
 }

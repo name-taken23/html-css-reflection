@@ -1,8 +1,18 @@
 /*---------- MEDIA QUERIES ------------- */
-
+@media (max-width: 554px) {
+  .bannerwrap .img-text {
+    margin-top: 16rem;
+  }
+}
 @media (max-width: 992px) {
   .bannerwrap .imgwrap {
     margin-top: 15px;
+    filter: brightness(50%);
+    &::before {
+      content: "";
+      
+      background:none;
+    }
   }
 
   .bannerwrap .img-text {
